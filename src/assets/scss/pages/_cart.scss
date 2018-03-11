@@ -1,4 +1,8 @@
 table.cart {
+    tr:last-child:hover {
+        background: transparent;
+    }
+
     td {
         vertical-align: middle;
     }
@@ -51,9 +55,17 @@ table.cart {
     margin-top: 30px;
 
     .cart_totals {
-        width: 47.8260869565%;
+        width: 50%;
         float: right;
         margin-right: 0;
+
+        h2 {
+            display: none;
+        }
+
+        table tr:hover {
+            background: transparent;
+        }
     }
 
     .wc-proceed-to-checkout {

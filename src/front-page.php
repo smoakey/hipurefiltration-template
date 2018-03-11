@@ -55,19 +55,17 @@
                     </div>
 
                     <div class="column">
-                        <form action="" method="POST" accept-charset="utf-8">
+                        <form action="https://hipurefiltration.us17.list-manage.com/subscribe/post" method="POST" accept-charset="utf-8">
+                            <input type="hidden" name="u" value="9e10a1862cf89c57f90d777d5">
+                            <input type="hidden" name="id" value="58558dbda1">
                             <div class="field is-grouped">
                                 <div class="control has-icons-left is-expanded">
-                                    <input type="email" value="" name="email" class="input is-flat required email" placeholder="email address" required="">
+                                    <input type="email" value="" name="MERGE0" class="input is-flat required email" placeholder="email address" required>
                                     <span class="icon is-small is-left">
                                         <i class="fas fa-envelope"></i>
                                     </span>
                                 </div>
                                 <div class="control">
-                                    <div class="is-hidden">
-                                        <input type="text" name="hp" id="hp">
-                                    </div>
-                                    <input type="hidden" name="list" value="">
                                     <input type="submit" value="Subscribe" name="submit" class="button is-white is-outlined">
                                 </div>
                             </div>

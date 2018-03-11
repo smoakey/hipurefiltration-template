@@ -1,1 +1,1 @@
-<section class="section product content">
+<section class="section product content"><div class="container is-fluid">

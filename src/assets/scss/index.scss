@@ -4,7 +4,9 @@ $hipure-teal: #189da6;
 // override Bulma defaults
 $radius: 0;
 $primary: $hipure-blue;
+$blue: $hipure-blue;
 $success: $hipure-teal;
+$danger: #A62919;
 @import "../../../node_modules/bulma/bulma";
 
 

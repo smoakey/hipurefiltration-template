@@ -1,5 +1,6 @@
 .single-product {
-    #sidebar {
+    #sidebar,
+    .related {
         display: none;
     }
 
@@ -10,18 +11,78 @@
 
     .woocommerce-product-gallery {
         float: left;
-        width: 30%;
+        width: 40%;
         margin-right: 2%;
+        position: relative;
+        margin-bottom: 3em;
 
         figure {
-            margin-left: 0;
-            margin-right: 0;
+            margin: 0;
+        }
+
+        img {
+            display: block;
+        }
+
+        .woocommerce-product-gallery__image:nth-child(n+2) {
+            width: 25%;
+            display: inline-block;
+        }
+
+        .flex-control-thumbs {
+            margin: 1rem 0 0 0;
+            text-align: left;
+
+            li {
+                list-style: none;
+                float: left;
+                cursor: pointer;
+                margin: 0;
+                width: 100px;
+
+                & + li {
+                    margin-left: 1rem;
+                }
+
+                &:hover img,
+                img.flex-active {
+                    opacity: 1;
+                }
+
+                img {
+                    opacity: .5;
+                }
+            }
+        }
+
+        .woocommerce-product-gallery__trigger {
+            position: absolute;
+            top: .875em;
+            right: .875em;
+            z-index: 999;
+            @extend .button, .is-primary;
+
+            img {
+                display: none !important;
+            }
+
+            &:before {
+                font: normal normal normal 1em/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                display: block;
+                content: "\f00e";
+                line-height: 2;
+                text-indent: 0;
+            }
         }
     }
 
     .summary {
         float: right;
-        width: 68%;
+        width: 58%;
 
         .price del {
             opacity: .5;
@@ -49,7 +110,37 @@
                 display: block;
             }
         }
+
+        table.variations {
+            tr:hover {
+                background-color: white;
+            }
+
+            td {
+                display: list-item;
+                border: none;
+                padding: 0;
+                list-style: none;
+            }
+
+            .value {
+                margin-bottom: 1em;
+            }
+
+            a.reset_variations {
+                display: inline-block;
+                margin-left: 1em;
+            }
+        }
+
+        button[type="submit"] {
+            @extend .is-primary;
+        }
     }
+}
+
+.pswp__caption .pswp__caption__center {
+    text-align: center;
 }
 
 @media (#{$bp-smaller-than-desktop}) {

@@ -1,7 +1,10 @@
 .notification {
     .button {
-        @extend .is-pulled-right;
-        @extend .is-small;
-        @extend .is-white;
+        @extend .is-pulled-right, .is-small, .is-white, .is-radiusless;
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
     }
 }
