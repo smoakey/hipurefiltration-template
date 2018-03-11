@@ -1,0 +1,22 @@
+.product-category {
+    a {
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:hover {
+            figure {
+                transform: scale(1.05);
+            }
+        }
+
+        figure {
+            margin-bottom: 10px;
+            transition: transform .2s;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+}

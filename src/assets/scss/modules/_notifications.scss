@@ -1,0 +1,7 @@
+.notification {
+    .button {
+        @extend .is-pulled-right;
+        @extend .is-small;
+        @extend .is-white;
+    }
+}

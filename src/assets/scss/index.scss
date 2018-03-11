@@ -1,0 +1,45 @@
+$hipure-blue: #084499;
+$hipure-teal: #189da6;
+
+// override Bulma defaults
+$radius: 0;
+$primary: $hipure-blue;
+$success: $hipure-teal;
+@import "../../../node_modules/bulma/bulma";
+
+
+// Breakpoints
+$bp-smaller-than-mobile    : "max-width: 400px" !default;
+$bp-smaller-than-phablet   : "max-width: 550px" !default;
+$bp-smaller-than-tablet    : "max-width: 750px" !default;
+$bp-smaller-than-desktop   : "max-width: 1000px" !default;
+$bp-smaller-than-desktophd : "max-width: 1200px" !default;
+
+@import "modules/header";
+@import "modules/footer";
+@import "modules/menu";
+@import "modules/hero";
+@import "modules/sections";
+@import "modules/breadcrumb";
+@import "modules/notifications";
+
+@import "pages/home";
+@import "pages/product";
+@import "pages/cart";
+
+html {
+    background: whitesmoke;
+}
+
+section {
+    background-color: white;
+}
+
+a {
+    color: $hipure-blue;
+}
+
+.screen-reader-text {
+    clip: rect(1px,1px,1px,1px);
+    position: absolute!important;
+}

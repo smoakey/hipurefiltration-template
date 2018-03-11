@@ -1,0 +1,17 @@
+[
+    {
+        "name": "HPSBT Series",
+        "type": "variable",
+        "description": "Single Bag Housings, Top Flow Bolted Cover",
+        "attributes": [
+            {
+                "Basket Size": [1,2],
+                "Connection Size": [1.5,2,3],
+                "Connection Type": ["N=NPT","F=Flange", "T=TriClamp"],
+                "Outlet Location": ["A=Side", "B=Bottom"],
+                "Material": ["C=Carbon Steel", "4=304SS", "6=316SS"],
+                "Pressure Rating": ["15=15psi"]
+            }
+        ]
+    }
+]

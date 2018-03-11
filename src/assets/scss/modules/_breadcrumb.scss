@@ -1,0 +1,22 @@
+.breadcrumb-container {
+    background-color: $hipure-blue;
+    li {
+        & + li:before {
+            color: white;
+            opacity: 0.5;
+        }
+
+        &.is-active a {
+            opacity: 1;
+        }
+
+        a {
+            color: white !important;
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
