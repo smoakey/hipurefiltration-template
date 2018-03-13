@@ -13,7 +13,7 @@ function searchFormHtml() {
     return `
         <form class="product-search" method="get" id="searchform" action="/">
             <button type="submit" id="searchsubmit"></button>
-            <input type="text" value="" name="s" id="s" placeholder="Search by Keyword or Product #" />
+            <input type="text" value="" name="s" id="s" placeholder="Search by Keyword or Product #" autocomplete="false" />
             <input type="hidden" name="post_type" value="product" />
         </form>
     `;

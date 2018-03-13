@@ -27,6 +27,7 @@ $bp-smaller-than-desktophd : "max-width: 1200px" !default;
 
 @import "pages/home";
 @import "pages/product";
+@import "pages/products";
 @import "pages/cart";
 
 html {
@@ -44,4 +45,14 @@ a {
 .screen-reader-text {
     clip: rect(1px,1px,1px,1px);
     position: absolute!important;
+}
+
+.is-fa-icon {
+    font: normal normal normal 1em/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 2;
+    text-indent: 0;
 }

@@ -1,0 +1,33 @@
+.archive.tax-product_cat,
+.post-type-archive-product {
+    .woocommerce-ordering {
+        margin-bottom: 2.5em;
+    }
+
+    ul.products {
+        list-style: none;
+        @extend .columns, .is-multiline;
+
+        li {
+            margin: 0 0 1rem 0;
+            @extend .column, .is-one-third, .has-text-centered;
+
+             a.woocommerce-loop-product__link {
+                display: block;
+
+                h2 {
+                    @extend .is-size-5;
+                }
+            }
+
+            .add_to_cart_button {
+                @extend .is-primary;
+                margin: 1rem 0;
+            }
+        }
+    }
+
+    #sidebar {
+        display: none;
+    }
+}

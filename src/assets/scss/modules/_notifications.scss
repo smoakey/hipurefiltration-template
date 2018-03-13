@@ -1,5 +1,6 @@
 .notification {
     .button {
+        text-decoration: none !important;
         @extend .is-pulled-right, .is-small, .is-white, .is-radiusless;
     }
 

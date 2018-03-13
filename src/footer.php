@@ -8,8 +8,8 @@
                     <div class="column">
                         <h3>Products</h3>
                         <ul>
-                            <li><a href="/product-category/cartridges">Filter Cartridges</a></li>
-                            <li><a href="/product-category/housings">Filter Housings</a></li>
+                            <li><a href="/products/cartridges">Filter Cartridges</a></li>
+                            <li><a href="/products/housings">Filter Housings</a></li>
                         </ul>
                     </div>
                     <div class="column">
