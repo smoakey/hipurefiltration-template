@@ -1,0 +1,64 @@
+.woocommerce-MyAccount-navigation {
+    @extend .tabs, .is-boxed;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0;
+        }
+    }
+}
+
+.woocommerce-MyAccount-content {
+    label {
+        font-weight: bold;
+
+        .required {
+            @extend .has-text-danger;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        @extend .input;
+    }
+
+    fieldset {
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 2em 0;
+        padding-top: 1em;
+
+        legend {
+            padding: 0 1em 0 0;
+            @extend .is-uppercase, .is-small;
+        }
+    }
+
+    button[type="submit"] {
+        @extend .is-primary;
+    }
+}
+
+.woocommerce-ResetPassword {
+    label {
+        font-weight: bold;
+
+        .required {
+            @extend .has-text-danger;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        @extend .input;
+    }
+
+    button[type="submit"] {
+        @extend .is-primary;
+    }
+}

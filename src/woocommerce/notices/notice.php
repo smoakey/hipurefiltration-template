@@ -26,7 +26,7 @@ if ( ! $messages ) {
 
 ?>
 
-<div class="notification is-info">
+<div class="notification">
     <button class="delete"></button>
     <?php foreach ( $messages as $message ) : ?>
         <?php echo wp_kses_post( $message ); ?>

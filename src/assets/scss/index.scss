@@ -1,21 +1,7 @@
-$hipure-blue: #084499;
-$hipure-teal: #189da6;
-
-// override Bulma defaults
-$radius: 0;
-$primary: $hipure-blue;
-$blue: $hipure-blue;
-$success: $hipure-teal;
-$danger: #A62919;
-@import "../../../node_modules/bulma/bulma";
-
-
-// Breakpoints
-$bp-smaller-than-mobile    : "max-width: 400px" !default;
-$bp-smaller-than-phablet   : "max-width: 550px" !default;
-$bp-smaller-than-tablet    : "max-width: 750px" !default;
-$bp-smaller-than-desktop   : "max-width: 1000px" !default;
-$bp-smaller-than-desktophd : "max-width: 1200px" !default;
+@import "variables";
+@import "base";
+@import "helpers";
+@import "bulma";
 
 @import "modules/header";
 @import "modules/footer";
@@ -29,30 +15,5 @@ $bp-smaller-than-desktophd : "max-width: 1200px" !default;
 @import "pages/product";
 @import "pages/products";
 @import "pages/cart";
-
-html {
-    background: whitesmoke;
-}
-
-section {
-    background-color: white;
-}
-
-a {
-    color: $hipure-blue;
-}
-
-.screen-reader-text {
-    clip: rect(1px,1px,1px,1px);
-    position: absolute!important;
-}
-
-.is-fa-icon {
-    font: normal normal normal 1em/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 2;
-    text-indent: 0;
-}
+@import "pages/checkout";
+@import "pages/my-account";

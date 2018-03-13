@@ -21,12 +21,22 @@
 
                 <nav class="my-nav">
                     <ul>
-                        <li>
-                            <a href="/my-account">
-                                <i class="fas fa-user"></i>
-                                 My Account
-                            </a>
-                        </li>
+                        <?php if (is_user_logged_in()) : ?>
+                            <li>
+                                <a href="/my-account">
+                                    <i class="fas fa-user"></i>
+                                     My Account
+                                </a>
+                            </li>
+                        <?php else : ?>
+                            <li>
+                                <a href="/my-account">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                     Login
+                                </a>
+                            </li>
+                        <?php endif; ?>
+
                         <li>
                             <a href="/cart">
                                 <i class="fas fa-shopping-cart"></i>

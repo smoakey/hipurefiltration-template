@@ -1,11 +1,22 @@
 .notification {
     .button {
+        margin-top: -5px;
         text-decoration: none !important;
-        @extend .is-pulled-right, .is-small, .is-white, .is-radiusless;
+        @extend .is-pulled-right, .is-text;
+
+        &:after {
+            @extend .is-fa-icon;
+            content: "\f061";
+            margin-left: 5px;
+        }
     }
 
     a {
-        color: white;
         text-decoration: underline;
+    }
+
+    &.is-success a,
+    &.is-danger a {
+         color: white;
     }
 }

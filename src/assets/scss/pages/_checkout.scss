@@ -1,0 +1,150 @@
+.woocommerce-checkout {
+    form.checkout_coupon {
+        margin-bottom: 2em;
+        @extend .is-clearfix;
+
+        p {
+            float: left;
+        }
+
+        input {
+            @extend .input;
+        }
+    }
+
+    form.checkout {
+        @extend .columns, .is-clearfix, .is-multiline;
+
+        .woocommerce-NoticeGroup {
+            @extend .column, .is-full;
+        }
+
+        #customer_details {
+            @extend .column, .is-half;
+
+            div + div {
+                margin-top: 2em;
+            }
+        }
+
+        #order_review_heading {
+            display: none;
+        }
+
+        #order_review {
+            @extend .column, .is-half;
+
+            &:before {
+                display: block;
+                content: 'Your Order';
+                font-size: 1.5em;
+                margin-bottom: 0.6666em;
+            }   
+
+            table.woocommerce-checkout-review-order-table {
+                margin-bottom: 2em;
+
+                tr:hover {
+                    background-color: transparent;
+                }
+
+                td,th {
+                    padding: 0.75em 1em;
+                }
+
+                th {
+                    background-color: #eee;
+                    &:first-child {
+                        width: 60%;
+                    }
+                }
+            }
+
+            #payment {
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+
+                fieldset {
+                    border: 0;
+
+                    input {
+                        @extend .input;
+                    }
+                }
+
+                .payment_method_stripe {
+                    .form-row {
+                        margin-bottom: 1em;
+                    }
+                    
+                    .form-row-first {
+                        float: left;
+                        width: 48%;
+                        margin-right: 1%;
+                    }
+
+                    .form-row-last {
+                        float: right;
+                        width: 48%;
+                        margin-left: 1%;
+                    }
+
+                    .clear {
+                        @extend .is-clearfix;
+                    }
+                }
+            }
+
+            .place-order {
+                button {
+                    width: 100%;
+                    @extend .button, .is-primary, .is-large;
+                }
+            }
+        }
+
+        label {
+            @extend .has-text-weight-bold;
+
+            abbr {
+                text-decoration: none;
+                @extend .has-text-danger;
+            }
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"] {
+            @extend .input;
+        }
+
+        textarea {
+            @extend .textarea;
+        }
+
+        .select2 {
+            &:focus {
+                outline: 0;
+
+                .select2-selection {
+                    outline: none;
+                    border-color: rgb(8, 68, 153);
+                    box-shadow: 0 0 0 0.125em rgba(8, 68, 153, 0.25);
+                }
+            }
+
+            .select2-selection--single {
+                @extend .is-radiusless;
+            }
+        }
+    } 
+}

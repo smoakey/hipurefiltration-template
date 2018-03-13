@@ -19,7 +19,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
-
 ?>
 
 <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
@@ -53,6 +52,10 @@ if ( ! defined( 'ABSPATH' ) ) {
             <a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="button is-text">Lost your password?</a>
         </div>
     </div>
+
+    <?php if ($_GET['redirect']) : ?>
+        <input type="hidden" name="redirect" value="<?php echo $_GET['redirect']; ?>" />
+    <?php endif; ?>
 
     <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 
