@@ -17,6 +17,10 @@ printf "Copying WP content files to remote..."
 rsync -ruv wordpress/wp-content/* mt:~/domains/sandbox.hipurefiltration.com/html/wp-content/
 success
 
+printf "Updating HTACCESS..."
+scp -q .htaccess mt:~/domains/sandbox.hipurefiltration.com/html/
+success
+
 printf "Dumping Wordpress DB..."
 mysqldump --compatible=mysql4 -P 9001 -h 127.0.0.1 -u wordpress -pwordpress wordpress > db_dump.sql
 success
