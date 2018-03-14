@@ -6,7 +6,7 @@ function add_theme_scripts() {
     $base = 'http://localhost:3001';
     $base_local = get_template_directory();
 
-    if ($_SERVER['SERVER_NAME'] != 'slocalhost') {
+    if ($_SERVER['SERVER_NAME'] != 'localhost') {
         $base = get_template_directory_uri();
         $file = "/dist/$bundle.min.css";
         wp_enqueue_style('bundle_css', $base . $file, [], @filemtime($base_local.$file));
