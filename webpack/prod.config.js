@@ -5,12 +5,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const theme = 'jeffersonrise';
+const theme = 'hipurefiltration';
 
 // define src & dist directories
 const srcDir = path.resolve(__dirname, '../src/');
 const assetsDir = path.resolve(__dirname, '../src/assets/');
-const beagleDir = path.resolve(__dirname, '../src/assets/portal/beagle/');
 const buildDir = path.resolve(__dirname, '../wordpress/wp-content/themes/' + theme);
 
 // base prod webpack config
@@ -19,8 +18,7 @@ module.exports = {
     devtool: 'source-map',
     stats: 'errors-only',
     entry: {
-        web: assetsDir + '/web/index.js',
-        portal: assetsDir + '/portal/index.js'
+        web: assetsDir + '/index.js'
     },
     output: {
         path: buildDir + '/dist/',
@@ -30,13 +28,7 @@ module.exports = {
         loaders : [
             {
                 test: /\.js$/,
-                include: beagleDir,
-                loaders: ['script-loader']
-            },
-            {
-                test: /\.js$/,
                 include: assetsDir,
-                exclude: beagleDir,
                 loaders: ['babel-loader?cacheDirectory=true']
             },
             {
