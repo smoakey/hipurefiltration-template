@@ -53,13 +53,21 @@
                                 <input name="phone" class="input" type="tel" placeholder="Phone" />
                             </div>
                         </div>
+                        
+                        <div class="field">
+                            <label class="label">Product Name/SKU</label>
+                            <div class="control">
+                                <input name="product" class="input" type="tel" placeholder="Product Name/SKU" value="<?php echo strtoupper($_GET['product_sku']); ?>" />
+                            </div>
+                        </div>
+
                         <div class="field">
                             <label class="label">
                                 Comment/Question 
                                 <span class="has-text-danger is-uppercase is-size-7">*</span>
                             </label>
                             <div class="control">
-                                <textarea name="comment" class="textarea" placeholder="Comments or questions" required></textarea>
+                                <textarea name="comment" class="textarea" placeholder="Comments or questions" required><?php echo isset($_GET['product_sku']) ? 'I am interested in ordering product #' . $_GET['product_sku'] : ''; ?></textarea>
                             </div>
                         </div>
                         <div class="field is-grouped is-grouped-centered">

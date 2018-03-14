@@ -98,6 +98,16 @@
                 width: 4em;
             }
         }
+
+        .stock {
+            margin: 1em 0;
+            display: inline-block;
+
+            &.out-of-stock {
+                @extend .is-uppercase, .has-text-weight-semibold, .has-text-danger;
+            }
+        }
+
         .product_meta {
             > span {
                 font-size: 0.8em;
@@ -135,6 +145,10 @@
         }
 
         button[type="submit"] {
+            &.disabled {
+                cursor: not-allowed;
+                opacity: 0.5;
+            }
             @extend .is-primary;
         }
     }
