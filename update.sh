@@ -9,12 +9,12 @@ function success {
 }
 
 printf "Building client..."
-# npm run build
+npm run build
 success
 
 printf "Copying WP content files to remote..."
 # rsync -ruv --exclude wordpress/wp-content/uploads/ wordpress/wp-content/* mt:~/domains/sandbox.hipurefiltration.com/html/wp-content/
-# rsync -ruv wordpress/wp-content/* mt:~/domains/sandbox.hipurefiltration.com/html/wp-content/
+rsync -ruv wordpress/wp-content/* mt:~/domains/sandbox.hipurefiltration.com/html/wp-content/
 success
 
 printf "Dumping Wordpress DB..."
