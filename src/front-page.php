@@ -28,13 +28,16 @@
                 <?php $productCategories = get_terms('product_cat', ['hide_empty' => 0, 'number' => 3]); ?>
                 <?php foreach ($productCategories as $productCategory) : ?>
                     <div class="column product-category">
-                        <?php 
-                            $thumbnail_id = get_woocommerce_term_meta($productCategory->term_id, 'thumbnail_id', true);
-                            $image = wp_get_attachment_url($thumbnail_id);
-                        ?>
                         <a href="<?php echo get_category_link($productCategory->term_id); ?>">
                             <figure class="image is-square">
-                                <img src="<?php echo $image; ?>">
+                                <?php
+                                    $thumbnail_id = get_woocommerce_term_meta(
+                                        $productCategory->term_id,
+                                        'thumbnail_id',
+                                        true
+                                    );
+                                    echo wp_get_attachment_image($thumbnail_id, [300,300]);
+                                ?>
                             </figure>
                             <?php echo $productCategory->name; ?>
                             <span>(<?php echo $productCategory->count; ?>)</span>

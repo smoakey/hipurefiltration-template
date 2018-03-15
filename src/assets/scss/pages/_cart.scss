@@ -68,10 +68,23 @@ table.cart {
         }
     }
 
+    
+
     .wc-proceed-to-checkout {
         a {
             width: 100%;
             @extend .button, .is-primary, .is-large;
         }
+    }
+}
+
+ul#shipping_method {
+    list-style: none;
+    margin: 0 0 1em 0;
+}
+
+form.woocommerce-shipping-calculator {
+    input[type="text"] {
+        @extend .input;
     }
 }

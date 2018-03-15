@@ -1,6 +1,9 @@
 <?php
 // dont include woocommerce styles
 add_filter('woocommerce_enqueue_styles', '__return_empty_array');
+remove_action('wp_head', 'wp_oembed_add_host_js');
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
 
 add_action('after_setup_theme', 'woocommerce_support');
 add_action('woocommerce_before_main_content', 'woocommerce_remove_breadcrumb');
