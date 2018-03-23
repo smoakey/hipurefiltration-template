@@ -60,15 +60,22 @@
             top: .875em;
             right: .875em;
             z-index: 99;
+            color: transparent;
+            text-indent: -9999px;
             @extend .button, .is-primary;
 
             img {
                 display: none !important;
             }
 
+            &:hover {
+                color: transparent;
+            }
+
             &:before {
                 @extend .is-fa-icon;
                 display: block;
+                color: white;
                 content: "\f00e";
             }
         }
@@ -151,6 +158,11 @@
             }
             @extend .is-primary;
         }
+    }
+
+    .woocommerce-variation-price {
+        margin-bottom: 1em;
+        @extend .is-size-5, .has-text-weight-semibold, .has-text-success;
     }
 }
 

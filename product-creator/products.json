@@ -1,16 +1,53 @@
 [
     {
-        "name": "HPSBT Series",
+        "name": "PurePleat Pro",
         "type": "variable",
-        "description": "Single Bag Housings, Top Flow Bolted Cover",
+        "description": "<p>Polyethersulfone Membrane Cartridges. PurePleat PRO used for critical process filtration in electronics, DI water, chemical manufacturing, wine, beer & other beverage filtration.</p><h3>Features and Specifications</h3><ul><li>PurePleat PRO is offered in .22 and .45 micron @ 99% filtration efficiency</li><li>USA Manufacturing assures a superior and consistent product</li><li>Cartridges have excellent dirt holding capacity with low flow resistance</li><li>Naturally hydrophilic media does not need wetted before use</li><li>Multiple end cap configurations available</li><li>Polyethersulfone media is excellent for its low protein binding and chemical compatibility</li><li>Cartridges are manufactured to meet FDA Title 21 for food contact applications</li><li>Cartridges are constructed in a clean room environment</li><li>Multiple O-ring & Gasket materials available</li><li>Compatible Filter Housings: ICS, ICC, SCC, SCB</li></ul>",
+        "in_stock": false,
+        "sku": "HPPES",
+        "categories": [{"id": 18}],
         "attributes": [
             {
-                "Basket Size": [1,2],
-                "Connection Size": [1.5,2,3],
-                "Connection Type": ["N=NPT","F=Flange", "T=TriClamp"],
-                "Outlet Location": ["A=Side", "B=Bottom"],
-                "Material": ["C=Carbon Steel", "4=304SS", "6=316SS"],
-                "Pressure Rating": ["15=15psi"]
+                "name": "Micron",
+                "variation": true,
+                "options": [".22",".45"]
+            },
+            {
+                "name": "Cartridge Length",
+                "variation": true,
+                "options": ["10","20","30","40"]
+            },
+            {
+                "name": "End Configuration",
+                "variation": true,
+                "options": ["DOE=Double Open Ended", "222/FLT=222 / Flat", "222FIN=222 / Fin", "226FIN=226 / Fin"]
+            },
+            {
+                "name": "O-Ring/Gasket Material",
+                "variation": true,
+                "options": ["S=Silicone", "B=Buna", "D=EPDM"]
+            }
+        ],
+        "variations": [
+            {
+                "sku": "HPPES.2210DOES",
+                "regular_price": "80.00",
+                "weight": "16",
+                "dimensions": {
+                    "length": "15",
+                    "width": "4",
+                    "height": "4"
+                }
+            },
+            {
+                "sku": "HPPES.2220DOES",
+                "regular_price": "160.00",
+                "weight": "32",
+                "dimensions": {
+                    "length": "25",
+                    "width": "4",
+                    "height": "4"
+                }
             }
         ]
     }

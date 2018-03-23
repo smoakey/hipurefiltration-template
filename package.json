@@ -32,11 +32,13 @@
   },
   "dependencies": {
     "bulma": "^0.6.2",
+    "combos": "^0.2.0",
     "fontawesome": "^4.7.2",
     "jquery": "^1.12.4",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.5",
     "moment": "^2.18.1",
     "pikaday": "git+https://github.com/dbushell/Pikaday.git ",
-    "tippy.js": "^0.14.1"
+    "tippy.js": "^0.14.1",
+    "woocommerce-api": "^1.4.2"
   }
 }
