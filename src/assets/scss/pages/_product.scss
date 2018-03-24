@@ -85,6 +85,10 @@
         float: right;
         width: 58%;
 
+        .woocommerce-product-details__short-description {
+            margin-bottom: 1em;
+        }
+
         .price del {
             opacity: .5;
             font-weight: 400;
@@ -107,7 +111,6 @@
         }
 
         .stock {
-            margin: 1em 0;
             display: inline-block;
 
             &.out-of-stock {
@@ -122,34 +125,37 @@
             }
         }
 
-        table.variations {
-            tr:hover {
-                background-color: white;
-            }
+        .variations_form {
+            table.variations {
+                tr:hover {
+                    background-color: white;
+                }
 
-            td {
-                display: list-item;
-                border: none;
-                padding: 0;
-                list-style: none;
-            }
+                td {
+                    display: list-item;
+                    border: none;
+                    padding: 0;
+                    list-style: none;
+                }
 
-            .value {
-                margin-bottom: 1em;
-            }
+                .value {
+                    margin-bottom: 1em;
+                }
 
-            a.reset_variations {
-                display: inline-block;
-                margin: 0.75em 0 0 1em;
-                @extend .is-size-7, .is-uppercase, .has-text-grey;
+                a.reset_variations {
+                    display: inline-block;
+                    margin: 0.75em 0 0 1em;
+                    @extend .is-size-7, .is-uppercase, .has-text-grey;
 
-                &:before {
-                    @extend .is-fa-icon;
-                    content: "\f05e";
-                    margin-right: 5px;
+                    &:before {
+                        @extend .is-fa-icon;
+                        content: "\f05e";
+                        margin-right: 5px;
+                    }
                 }
             }
         }
+
 
         button[type="submit"] {
             &.disabled {
@@ -158,11 +164,39 @@
             }
             @extend .is-primary;
         }
+
+        .woocommerce-variation-price {
+            @extend .is-size-5, .has-text-weight-semibold, .has-text-success;
+        }
+
+        .woocommerce-variation-add-to-cart {
+            margin-top: 1em;
+        }
     }
 
-    .woocommerce-variation-price {
-        margin-bottom: 1em;
-        @extend .is-size-5, .has-text-weight-semibold, .has-text-success;
+    .woocommerce-tabs {
+        padding-top: 2em;
+        clear: both;
+
+        .tabs ul {
+            margin: 0;
+
+            li {
+                + li {
+                    margin-top: 0;
+                }
+
+                &.active {
+                    @extend .is-active;
+                }
+            }
+        }
+
+        .woocommerce-Tabs-panel {
+            h2 {
+                display: none;
+            }
+        }
     }
 }
 
