@@ -1,37 +1,36 @@
 <?php
-add_filter('posts_join', 'products_search_join');
-add_filter('posts_where', 'products_search_where');
-add_filter('posts_distinct', 'products_search_distinct');
+add_filter( 'posts_search', 'product_search' );
 
-function products_search_join($join) {
-    global $wpdb;
+function product_search( $where ) {
+    global $pagenow, $wpdb, $wp;
 
-    if (is_search()) {
-        $join .=' LEFT JOIN '.$wpdb->postmeta. ' ON '. $wpdb->posts . '.ID = ' . $wpdb->postmeta . '.post_id ';
+    if (!is_search() || !isset($wp->query_vars['s']) || 'product' != $wp->query_vars['post_type'] ) {
+        return $where;
     }
 
-    return $join;
-}
+    $search_ids = array();
+    $terms      = explode( ',', $wp->query_vars['s'] );
 
-function products_search_where($where) {
-    global $pagenow, $wpdb;
+    foreach ($terms as $term){
+        if (is_numeric($term)){
+            $post_type = get_post_type( $term );
+            if($post_type == 'product_variation'){
+                $search_ids[]   =   wp_get_post_parent_id($term);
+            }else{
+               $search_ids[]   =   $term;
+            }
+        }
+        // Attempt to get a SKU
+        $sku_to_id = $wpdb->get_results( $wpdb->prepare( "SELECT ID, post_parent FROM {$wpdb->posts} LEFT JOIN {$wpdb->postmeta} ON {$wpdb->posts}.ID = {$wpdb->postmeta}.post_id WHERE meta_key='_sku' AND meta_value LIKE %s;", '%' . $wpdb->esc_like( wc_clean( $term ) ) . '%' ) );
+        $sku_to_id = array_merge( wp_list_pluck( $sku_to_id, 'ID' ), wp_list_pluck( $sku_to_id, 'post_parent' ) );
 
-    if (is_search()) {
-        $where = preg_replace(
-            "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
-            "(".$wpdb->posts.".post_title LIKE $1) OR (".$wpdb->postmeta.".meta_value LIKE $1)", $where
-        );
+        if (sizeof($sku_to_id) > 0) {
+            $search_ids = array_merge($search_ids, $sku_to_id);
+        }
     }
-
-    return $where;
-}
-
-function products_search_distinct($where) {
-    global $wpdb;
-
-    if (is_search()) {
-        return "DISTINCT";
+    $search_ids = array_filter( array_unique( array_map( 'absint', $search_ids ) ) );
+    if ( sizeof( $search_ids ) > 0 ) {
+        $where = str_replace( 'AND (((', "AND ( ({$wpdb->posts}.ID IN (" . implode( ',', $search_ids ) . ")) OR ((", $where );
     }
-
     return $where;
 }

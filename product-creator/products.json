@@ -74,7 +74,7 @@
                 "regular_price": "80.00",
                 "weight": "1",
                 "manage_stock": true,
-                "stock_quantity": 1,
+                "stock_quantity": 0,
                 "backorders": "notify",
                 "dimensions": {
                     "length": "15",
@@ -87,7 +87,7 @@
                 "regular_price": "160.00",
                 "weight": "2",
                 "manage_stock": true,
-                "stock_quantity": 1,
+                "stock_quantity": 0,
                 "backorders": "notify",
                 "dimensions": {
                     "length": "25",
@@ -187,7 +187,6 @@
                     "height": "4"
                 }
             }
-
         ]
     }
 ]
