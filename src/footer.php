@@ -1,9 +1,12 @@
-        
+
         <footer class="footer">
             <div class="container is-fluid">
                 <div class="columns">
                     <div class="column is-two-thirds">
-                        &copy; HiPure Filtration Inc.
+                        <div class="flag">
+                            &copy; HiPure Filtration Inc. <br />
+                            Denver, CO
+                        </div>
                     </div>
                     <div class="column">
                         <h3>Products</h3>
