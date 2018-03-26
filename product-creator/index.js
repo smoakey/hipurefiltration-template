@@ -25,16 +25,27 @@ async function init() {
         const skuBase = product.sku;
         const names = _.map(product.attributes, 'name');
         const options = _.map(product.attributes, 'options');
-        const variations = combos(_.zipObject(names, options));
+        const optionKeys = _.map(rawData.attributes, 'option_keys');
+        const namesAndOptions = _.zipObject(names, options);
 
+        let normalized = {};
+        let i = 0;
+        _.forEach(namesAndOptions, (obj, name) => {
+            const result = _.zipObject(obj, optionKeys[i]);
+            i++;
+            normalized[name] = result;
+        });
+
+        const variations = combos(namesAndOptions);
         variations.map(variation => {
             const attributes = _.map(variation, (option, name) => ({ name, option }));
+
             const sku = skuBase + _.chain(variation)
-                .values()
-                .map(value => {
-                    const pieces = _.split(value, '=');
-                    return pieces[0];
+                .map((value, key) => {
+                    const normalizedValues = normalized[key];
+                    return !_.isUndefined(normalizedValues[value]) ? normalizedValues[value] : value;
                 })
+                .values()
                 .join('')
                 .value();
 

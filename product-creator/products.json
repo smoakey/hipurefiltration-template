@@ -21,12 +21,14 @@
             {
                 "name": "End Configuration",
                 "variation": true,
-                "options": ["DOE=Double Open Ended", "222FLT=222 / Flat", "222FIN=222 / Fin", "226FIN=226 / Fin"]
+                "options": ["Double Open Ended", "222 / Flat", "222 / Fin", "226 / Fin"],
+                "option_keys": ["DOE", "222FLT", "222FIN", "226FIN"]
             },
             {
                 "name": "O-Ring/Gasket Material",
                 "variation": true,
-                "options": ["S=Silicone", "B=Buna", "D=EPDM"]
+                "options": ["Silicone", "Buna", "EPDM"],
+                "option_keys": ["S", "B", "D"]
             }
         ],
         "variations": [
@@ -211,17 +213,20 @@
             {
                 "name": "Connection Type",
                 "variation": true,
-                "options": ["N=NPT", "F=Flange", "T=Tri-Clamp"]
+                "options": ["NPT", "Flange", "Tri-Clamp"],
+                "option_keys": ["N", "F", "T"]
             },
             {
                 "name": "Material",
                 "variation": true,
-                "options": ["6=316SS", "4=304SS"]
+                "options": ["316SS", "304SS"],
+                "option_keys": ["6", "4"]
             },
             {
                 "name": "Gasket",
                 "variation": true,
-                "options": ["E=EPDM (STD)", "V=Viton", "B=Buna", "S=Silicone"]
+                "options": ["EPDM (STD)", "Viton", "Buna", "Silicone"],
+                "option_keys": ["E", "V", "B", "S"]
             }
         ],
         "variations": [
