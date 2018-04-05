@@ -59,7 +59,7 @@ async function init() {
                 const variationData = _.extend({}, definedVariation, { attributes });
                 createOrUpdateProductVariation(product.id, variationData);
             } else {
-                // console.log(' - skipping variation: ' + sku);
+                console.log(' - skipping variation: ' + sku);
             }
         });
     });
@@ -111,7 +111,7 @@ function createProduct(productData) {
             if (err) {
                 return reject(err);
             }
-            // console.log('Created: ' + productData.name);
+            console.log('Created: ' + productData.name);
             resolve(JSON.parse(res));
         });
     });
@@ -123,7 +123,7 @@ function updateProduct(productId, productData) {
             if (err) {
                 return reject(err);
             }
-            // console.log('Updated: ' + productData.name);
+            console.log('Updated: ' + productData.name);
             resolve(JSON.parse(res));
         });
     });

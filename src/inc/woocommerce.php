@@ -44,7 +44,9 @@ function add_custom_availability_html($html, $availability_availability, $produc
             break;
         case 'outofstock':
             $availability_html = '<p class="stock out-of-stock">Out of Stock</p>';
-            $availability_html .= ' &mdash; Lead Time: <strong>' . $leadTime . '</strong>';
+            if ($leadTime != '' && $leadTime != 'Unknown') {
+                $availability_html .= ' &mdash; Lead Time: <strong>' . $leadTime . '</strong>';
+            }
             $availability_html .= ' &mdash; <a href="/contact-us?product_sku='. $product->get_sku() .'">Contact us to order &rsaquo;</a>';
             break;
     }

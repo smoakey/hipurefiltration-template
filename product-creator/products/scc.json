@@ -2,8 +2,8 @@
     "name": "HPSCC Series",
     "type": "variable",
     "short_description": "HPSCC/HPSCB Series housings robust design and high purity construction assures dependable protection for critical process applications",
-    "description": "",
-    "sku": "SCC",
+    "description": "<h3>Process Fluids</h3><ul><li>Water (Ultrapure/R.O./D.I)</li><li>Chemicals</li><li>Food & Beverage</li><li>Cosmetics</li><li>Beer/Wine/Liquors</li><li>Electronics</li><li>Pharmaceuticals</li><li>Vent</li></ul><h3>Design Specifications</h3><ul><li>Wetted components are 316LSS with 32Ra external polish and 25Ra internal polish (25Ra external available) All housings are passivated.</li><li>SCC housings utilize a heavy duty stainless tri-clamp closure for ease of element changes</li><li>SCB housings feature swing bolt closures to ensure positive sealing</li><li>150psi working pressure @ 300F</li><li>1-1/2\" Tri-Clamp Vent/Gauge connection standard</li><li>1/2\" Tri-Clamp Drain connections standard</li><li>222 or 226 style elements</li><li>Removable Bottom Plate on multi-round housings allows for 100% access for cleaning</li><li>Standard Silicone o-ring seals</li></ul><h3>Options</h3><ul><li>Bevel Seat, I-Line, SMS, Flanged fittings</li><li>Seal materials (EPDM, Viton, Teflon Encapsulated Silicone & Teflon Encapsulated Viton)</li><li>Custom OEM designs</li></ul>",
+    "sku": "HPSCC",
     "categories": [{"id": 19}],
     "attributes": [
         {
@@ -43,6 +43,6 @@
         "manage_stock": true,
         "stock_quantity": 0,
         "backorders": "no",
-        "regular_price": "0"
+        "regular_price": ""
     }
 }
