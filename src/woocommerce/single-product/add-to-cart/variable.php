@@ -23,28 +23,6 @@ global $product;
 
 $attribute_keys = array_keys( $attributes );
 
-foreach($available_variations as $i => $variation) {
-    $productVariation = new WC_Product_Variation($variation['variation_id']);
-    $leadTime = get_field('lead_time', get_the_ID());
-
-    switch($productVariation->get_stock_status())
-    {
-        case 'instock':
-            $availability_html = '';
-            break;
-        case 'onbackorder':
-            $availability_html = '<p class="stock backorder">Ships within <strong>' . $leadTime . '</strong></p>';
-            break;
-        case 'outofstock':
-            $availability_html = '<p class="stock out-of-stock">Out of Stock</p>';
-            $availability_html .= ' &mdash; Lead Time: <strong>' . $leadTime . '</strong>';
-            $availability_html .= ' &mdash; <a href="/contact-us?product_sku='. $productVariation->get_sku() .'">Contact us to order &rsaquo;</a>';
-            break;
-    }
-
-    $available_variations[$i]['availability_html'] = $availability_html;
-}
-
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 <form class="variations_form cart" action="<?php echo esc_url( get_permalink() ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo htmlspecialchars( wp_json_encode( $available_variations ) ) ?>">

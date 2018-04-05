@@ -1,0 +1,48 @@
+{
+    "name": "HPSCC Series",
+    "type": "variable",
+    "short_description": "HPSCC/HPSCB Series housings robust design and high purity construction assures dependable protection for critical process applications",
+    "description": "",
+    "sku": "SCC",
+    "categories": [{"id": 19}],
+    "attributes": [
+        {
+            "name": "Element Qty",
+            "variation": true,
+            "options": ["1"]
+        },
+        {
+            "name": "Element Length",
+            "variation": true,
+            "options": ["10","20","30","40"]
+        },
+        {
+            "name": "Element Type",
+            "variation": true,
+            "options": ["222","226"]
+        },
+        {
+            "name": "Connection Size",
+            "variation": true,
+            "options": ["1","1.5"]
+        },
+        {
+            "name": "Connection Type",
+            "variation": true,
+            "options": ["Triclamp"],
+            "option_keys": ["TC"]
+        },
+        {
+            "name": "Seal Material",
+            "variation": true,
+            "options": ["Silicone", "Viton", "EPDM", "Encapsulated Teflon"],
+            "option_keys": ["S", "V", "E", "TS/TV"]
+        }
+    ],
+    "allVariations": {
+        "manage_stock": true,
+        "stock_quantity": 0,
+        "backorders": "no",
+        "regular_price": "0"
+    }
+}

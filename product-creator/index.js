@@ -1,8 +1,8 @@
 const _ = require('lodash');
 const combos = require('combos');
 const WooCommerceAPI = require('woocommerce-api');
+const glob = require('glob');
 
-const rawProductsData = require('./products.json');
 const WooCommerce = new WooCommerceAPI({
     url: 'http://localhost:9000/',
     consumerKey: 'ck_eda621663c4c50b2bc0853c8b014a96278c99400',
@@ -16,6 +16,7 @@ init();
 async function init() {
     console.log('Product Creator Result');
     console.log('-------------------------------------------');
+    const rawProductsData = await getRawProductsData();
     const products = await getAllProducts();
     const productsKeyedByName = _.keyBy(products, 'sku');
     const createdAndUpdatedProducts = await createAllProducts(rawProductsData, productsKeyedByName);
@@ -23,8 +24,8 @@ async function init() {
     createdAndUpdatedProducts.map(product => {
         const rawData = _.find(rawProductsData, { sku: product.sku });
         const skuBase = product.sku;
-        const names = _.map(product.attributes, 'name');
-        const options = _.map(product.attributes, 'options');
+        const names = _.map(rawData.attributes, 'name');
+        const options = _.map(rawData.attributes, 'options');
         const optionKeys = _.map(rawData.attributes, 'option_keys');
         const namesAndOptions = _.zipObject(names, options);
 
@@ -50,12 +51,33 @@ async function init() {
                 .value();
 
             const definedVariation = _.find(rawData.variations, { sku });
-            if (definedVariation) {
+            const allVariations = rawData.allVariations;
+            if (allVariations) {
+                const variationData = _.extend({}, allVariations, { sku, attributes });
+                createOrUpdateProductVariation(product.id, variationData);
+            } else if (definedVariation) {
                 const variationData = _.extend({}, definedVariation, { attributes });
                 createOrUpdateProductVariation(product.id, variationData);
             } else {
                 // console.log(' - skipping variation: ' + sku);
             }
+        });
+    });
+}
+
+function getRawProductsData() {
+    return new Promise((resolve, reject) => {
+        glob('./products/**/*.json', (err, files) => {
+            if (err) {
+                return reject(err);
+            }
+
+            const data = _.reduce(files, (data, file) => {
+                const nextData = require(file);
+                return data.concat(nextData);
+            }, []);
+
+            resolve(data);
         });
     });
 }
@@ -77,7 +99,7 @@ function createAllProducts(rawProductsData, productsKeyedByName) {
             const product = _.get(productsKeyedByName, productData.sku);
             return updateProduct(product.id, productData);
         }
-        return createProduct(productData);
+        return createProduct(productData).then(product => _.extend({}, product, { created: true }));
     });
 
     return Promise.all(createOrUpdatePromises);
@@ -89,7 +111,7 @@ function createProduct(productData) {
             if (err) {
                 return reject(err);
             }
-            console.log('Created: ' + productData.name);
+            // console.log('Created: ' + productData.name);
             resolve(JSON.parse(res));
         });
     });
@@ -101,7 +123,7 @@ function updateProduct(productId, productData) {
             if (err) {
                 return reject(err);
             }
-            console.log('Updated: ' + productData.name);
+            // console.log('Updated: ' + productData.name);
             resolve(JSON.parse(res));
         });
     });

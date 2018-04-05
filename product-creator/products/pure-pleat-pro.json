@@ -1,0 +1,269 @@
+{
+    "name": "PurePleat Pro",
+    "type": "variable",
+    "short_description": "PES Membrane Cartridge used for critical process filtration in electronics, DI water, chemical manufacturing, wine, beer & other beverage filtration.",
+    "description": "<p>Polyethersulfone Membrane Cartridges. PES Membrane Cartridge used for critical process filtration in electronics, DI water, chemical manufacturing, wine, beer & other beverage filtration.</p><h3>Features and Specifications</h3><ul><li>PurePleat PRO is offered in .22 and .45 micron @ 99% filtration efficiency</li><li>USA Manufacturing assures a superior and consistent product</li><li>Cartridges have excellent dirt holding capacity with low flow resistance</li><li>Naturally hydrophilic media does not need wetted before use</li><li>Multiple end cap configurations available</li><li>Polyethersulfone media is excellent for its low protein binding and chemical compatibility</li><li>Cartridges are manufactured to meet FDA Title 21 for food contact applications</li><li>Cartridges are constructed in a clean room environment</li><li>Multiple O-ring & Gasket materials available</li><li>Compatible Filter Housings: HPICS, HPICC, HPSCC, HPSCB</li></ul>",
+    "in_stock": false,
+    "sku": "HPPES",
+    "categories": [{"id": 18}],
+    "attributes": [
+        {
+            "name": "Micron Rating",
+            "variation": true,
+            "options": [".22",".45"]
+        },
+        {
+            "name": "Cartridge Length",
+            "variation": true,
+            "options": ["10","20","30","40"]
+        },
+        {
+            "name": "End Configuration",
+            "variation": true,
+            "options": ["Double Open Ended", "222 / Flat", "222 / Fin", "226 / Fin"],
+            "option_keys": ["DOE", "222FLT", "222FIN", "226FIN"]
+        },
+        {
+            "name": "O-Ring/Gasket Material",
+            "variation": true,
+            "options": ["Silicone", "Buna", "EPDM"],
+            "option_keys": ["S", "B", "D"]
+        }
+    ],
+    "variations": [
+        {
+            "sku": "HPPES.2210DOES",
+            "regular_price": "80.00",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.2220DOES",
+            "regular_price": "160.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.2230DOES",
+            "regular_price": "240.00",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.2210222FLTS",
+            "regular_price": "80.00",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.2220222FLTS",
+            "regular_price": "160.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.2230222FLTS",
+            "regular_price": "240.00",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.2210226FINS",
+            "regular_price": "80.00",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.2220226FINS",
+            "regular_price": "160.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.2230226FINS",
+            "regular_price": "240.00",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.4510DOES",
+            "regular_price": "77.50",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.4520DOES",
+            "regular_price": "155.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.4530DOES",
+            "regular_price": "232.50",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.4510222FLTS",
+            "regular_price": "77.50",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.4520222FLTS",
+            "regular_price": "155.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.4530222FLTS",
+            "regular_price": "232.50",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.4510226FINS",
+            "regular_price": "77.50",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.4520226FINS",
+            "regular_price": "155.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPES.4530226FINS",
+            "regular_price": "232.50",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        }
+    ]
+}
