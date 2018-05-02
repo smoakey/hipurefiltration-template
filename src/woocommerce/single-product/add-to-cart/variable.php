@@ -21,9 +21,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
+// dont make us have to create all the variations in DB
+$json = [];
+$no_entered_variations = false;
+if (empty($attributes)) {
+    $no_entered_variations = true;
+    $available_variations = false;
+    foreach ($product->get_attributes() as $key => $attr) {
+        $name = $attr->get_name();
+        $options = array_map(function($opt) {
+            $pieces = explode(':', $opt);
+            return end($pieces);
+        }, $attr->get_options());
+
+        $keyedOptions = [];
+        foreach ($attr->get_options() as $idx => $opt) {
+            $pieces = explode(':', $opt);
+            if (count($pieces) > 1) {
+                $keyedOptions[$pieces[1]] = $pieces[0];
+            } else {
+                $keyedOptions[$idx] = $pieces[0];
+            }
+        }
+
+        $json[$key] = $keyedOptions;
+
+        $attributes[$name] = $options;
+    }
+}
+
 $attribute_keys = array_keys( $attributes );
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+
+<?php if ($no_entered_variations) : ?>
+    <span class="no-variations-availability-template" data-map="<?php echo htmlspecialchars( wp_json_encode( $json ) ) ?>">
+        <?php echo add_custom_availability_html('', null, $product); ?>
+    </span>
+<?php endif; ?>
 
 <form class="variations_form cart" action="<?php echo esc_url( get_permalink() ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo htmlspecialchars( wp_json_encode( $available_variations ) ) ?>">
     <?php do_action( 'woocommerce_before_variations_form' ); ?>

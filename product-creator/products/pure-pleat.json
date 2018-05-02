@@ -1,0 +1,353 @@
+{
+    "name": "PurePleat",
+    "type": "variable",
+    "short_description": "PurePleat high efficient polypropylene pleated filters offer the ultimate solution in high-end filtration.",
+    "description": "<p>PurePleat high efficient polypropylene pleated filters offer the ultimate solution in high-end filtration.</p><h3>Features and Specifications</h3><ul><li>HiPure offers the highest grade, 90% and 99% efficient Cartridges on the market today.</li><li>Our media is manufactured in-house under strict guidelines to ensure consistency.</li><li>Complete in-house testing with a Capillary Flow Porometer guarantees a superior and consistent product.</li><li>With 8 micron ratings and multiple lengths to ensure we produce the element you require.</li><li>Cartridges have thermally bonded end caps and ultrasonic welded media seams for a one piece construction.</li><li>The maximum amount of media is installed in each filter without pleat blinding for increased dirt loading capacity.</li><li>Cartridges are 100% polypropylene—media, inner and outer supports and end caps.</li><li>All media and materials used in production are FDA Title 21 compliant.</li><li>Cartridges are constructed in a clean room environment.</li><li>Final, one piece construction up to 40” long ensures zero bypass.</li></ul>",
+    "in_stock": false,
+    "sku": "HPPP",
+    "categories": [{"id": 18}],
+    "attributes": [
+        {
+            "name": "Micron",
+            "variation": true,
+            "options": ["1","5","10"]
+        },
+        {
+            "name": "Length",
+            "variation": true,
+            "options": ["9.5","10","20","30","40"]
+        },
+        {
+            "name": "Open End",
+            "variation": true,
+            "options": ["222","226","Double Open Ended"],
+            "option_keys": ["222","226","DOE"]
+        },
+        {
+            "name": "Closed End",
+            "variation": true,
+            "options": ["FIN","Double Open Ended"],
+            "option_keys": ["FIN","DOE"]
+        },
+        {
+            "name": "O-Ring",
+            "variation": true,
+            "options": ["Silicone"],
+            "option_keys": ["S"]
+        }
+    ],
+    "variations": [
+        {
+            "sku": "HPPP110222FINS", 
+            "regular_price": "51.00",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP120222FINS", 
+            "regular_price": "67.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP130222FINS", 
+            "regular_price": "86.00",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP140222FINS", 
+            "regular_price": "99.50",
+            "weight": "4",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP510222FINS", 
+            "regular_price": "51.00",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP520222FINS", 
+            "regular_price": "67.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP530222FINS", 
+            "regular_price": "86.00",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP540222FINS", 
+            "regular_price": "99.50",
+            "weight": "4",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP1010222FINS", 
+            "regular_price": "48.00",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP1020222FINS", 
+            "regular_price": "60.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP1030222FINS", 
+            "regular_price": "73.00",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP1040222FINS", 
+            "regular_price": "85.00",
+            "weight": "4",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP110226FINS", 
+            "regular_price": "51.00",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP120226FINS", 
+            "regular_price": "67.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP130226FINS", 
+            "regular_price": "86.00",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP140226FINS", 
+            "regular_price": "99.50",
+            "weight": "4",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP510226FINS", 
+            "regular_price": "51.00",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP520226FINS", 
+            "regular_price": "67.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP530226FINS", 
+            "regular_price": "86.00",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP540226FINS", 
+            "regular_price": "99.50",
+            "weight": "4",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP1010226FINS", 
+            "regular_price": "48.00",
+            "weight": "1",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "15",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP1020226FINS", 
+            "regular_price": "60.00",
+            "weight": "2",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "25",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP1030226FINS", 
+            "regular_price": "73.00",
+            "weight": "3",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        },
+        {
+            "sku": "HPPP1040226FINS", 
+            "regular_price": "85.00",
+            "weight": "4",
+            "manage_stock": true,
+            "stock_quantity": 0,
+            "backorders": "notify",
+            "dimensions": {
+                "length": "35",
+                "width": "4",
+                "height": "4"
+            }
+        }
+    ]
+}

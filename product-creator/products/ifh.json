@@ -1,0 +1,45 @@
+{
+    "name": "HPIFH SERIES",
+    "type": "variable",
+    "short_description": "Industrial High Flow Cartridge Housings. HPIHF Series housings robust design and high quality construction assures dependable protection for industrial and commercial applications.",
+    "description": "<h3>Process Fluids</h3><ul><li>Water (Fresh/Sea/R.O./D.I/Waste)</li><li>Desalination</li><li>Power Generation</li><li>Chemicals</li><li>Oils</li><li>Coolants</li><li>Food & Beverage</li><li>Pulp & Paper</li></ul><h3>Design Specifications</h3><ul><li>Carbon Steel, 304SS, 316SS or 316LSS</li><li>Swing Lid design with Eyebolt closure for dependable sealing / Davit Arm standard on larger sizes</li><li>150psi design pressure / 300F max temp</li><li>Sizes to accommodate 1-19 elements (larger available)</li><li>Accepts 40” or 60” length elements</li><li>Designs to accept any mfg. elements, consult HiPure prior to ordering</li><li>Inside-Out or Outside-In flow path designs available</li><li>Differential/Drain/Vent connections standard</li><li>Standard EPDM o-ring seal</li><li>Finish: 2-Part Epoxy on Carbon Steel, Acid Wash with Electropolish exterior on Stainless</li></ul><h3>Options</h3><ul><li>Tri-Clamp/DIN Flanges/Victaulic connections</li><li>Seal materials (Viton, Buna, Encapsulated Teflon)</li><li>Duplexing</li><li>Custom OEM designs</li></ul>",
+    "sku": "HPIFH",
+    "categories": [{"id": 19}],
+    "attributes": [
+        {
+            "name": "Element Quantity",
+            "variation": true,
+            "options": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"," 18", "19"]
+        },
+        {
+            "name": "Element Length",
+            "variation": true,
+            "options": ["4:40", "6:60"],
+            "option_keys": ["4", "60"]
+        },
+        {
+            "name": "Mounting Style",
+            "variation": true,
+            "options": ["H:Horizontal", "V:Vertical"],
+            "option_keys": ["H", "V"]
+        },
+        {
+            "name": "Connection Type",
+            "variation": true,
+            "options": ["2F:2\" Flange", "3F:3\" Flange", "4F:4\" Flange", "5F:5\"Flange", "6F:6\"Flange", "7F:7\"Flange", "8F:8\"Flange", "9F:9\"Flange", "10F:10\" Flange", "11F:11\" Flange", "12F:12\" Flange"]
+        },
+        {
+            "name": "Material",
+            "variation": true,
+            "options": ["C:Carbon", "4:304SS", "6:316SS", "6L:316LSS"],
+            "option_keys": ["C", "4", "6", "6L"]
+        },
+        {
+            "name": "Seal Material",
+            "variation": true,
+            "options": ["E:EPDM", "V:Viton", "B:Buna", "TV:Teflon/Viton"],
+            "option_keys": ["E", "V", "B", "TV"]
+        }
+    ],
+    "allVariations": true
+}

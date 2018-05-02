@@ -88,3 +88,10 @@ form.woocommerce-shipping-calculator {
         @extend .input;
     }
 }
+
+
+// this is so we dont have to put in all product variations for products we jsut want to link to contact form
+.no-variations-availability-template,
+.wc-no-matching-variations {
+    display: none !important;
+}

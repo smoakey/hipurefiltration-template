@@ -40,7 +40,7 @@ function add_custom_availability_html($html, $availability_availability, $produc
             $availability_html = '';
             break;
         case 'onbackorder':
-            $availability_html = '<p class="stock backorder">Ships within <strong>' . $leadTime . '</strong></p>';
+            $availability_html = '<p class="stock backorder">Delivered within <strong>' . $leadTime . '</strong></p>';
             break;
         case 'outofstock':
             $availability_html = '<p class="stock out-of-stock">Out of Stock</p>';

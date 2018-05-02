@@ -1,0 +1,50 @@
+{
+    "name": "HPICC SERIES",
+    "type": "variable",
+    "short_description": "Multi-Round Industrial Cartridge Housings, Clamped Cover. HPICC Series housings robust design and high quality construction assures dependable protection for industrial and commercial applications.",
+    "description": "<h3>Process Fluids</h3><ul><li>Water (Fresh/Sea/R.O./D.I/Waste)</li><li>Chemicals</li><li>Food & Beverage</li><li>Soaps & Detergents</li><li>Oils</li><li>Coolants</li><li>Paints & Coatings</li><li>Pulp & Paper</li></ul><h3>Design Specifications</h3><ul><li>304SS, 316SS or 316LSS</li><li>Heavy Duty Stainless Clamp Closure with ergonomic grip allows for tool free cartridge changes</li><li>150psi design pressure / 300F max temp</li><li>Accepts 10” thru 40” length elements (2.75” o.d. max)Universal cups and compression top plate accepts DOE, 222-Flat or 222-Fin style cartridges</li><li>Differential/Drain/Vent connections standard</li><li>Stainless legs</li><li>Standard EPDM o-ring seal</li><li>Finish: Acid Wash with Electropolish exterior</li></ul><h3>Options</h3><ul><li>Flanges/Tri-Clamp</li><li>Seal materials (Viton, Teflon Encapsulated Silicone & Teflon Encapsulated Viton)</li><li>Sanitary Polish</li><li>Custom OEM designs</li></ul>",
+    "sku": "HPICC",
+    "categories": [{"id": 19}],
+    "attributes": [
+        {
+            "name": "Element Quantity",
+            "variation": true,
+            "options": ["3", "4", "5", "7"]
+        },
+        {
+            "name": "Element Length",
+            "variation": true,
+            "options": ["10", "20", "30", "40"]
+        },
+        {
+            "name": "Element Style",
+            "variation": true,
+            "options": ["D:DOE/222", "6:226"],
+            "option_keys": ["D", "6"]
+        },
+        {
+            "name": "Element Size",
+            "variation": true,
+            "options": ["1.5", "2"]
+        },
+        {
+            "name": "Connection Type",
+            "variation": true,
+            "options": ["N:NPT", "F:Flange", "T:Tri-Clamp"],
+            "option_keys": ["N", "F", "T"]
+        },
+        {
+            "name": "Material",
+            "variation": true,
+            "options": ["4:304SS", "6:316SS", "6L:316LSS"],
+            "option_keys": ["4", "6", "6L"]
+        },
+        {
+            "name": "Seal Material",
+            "variation": true,
+            "options": ["E:EPDM", "V:Viton", "TS:Teflon/Silicons", "TV:Teflon/Viton"],
+            "option_keys": ["E", "V", "TS", "TV"]
+        }
+    ],
+    "allVariations": true
+}

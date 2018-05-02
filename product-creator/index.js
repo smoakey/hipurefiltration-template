@@ -38,7 +38,8 @@ async function init() {
         });
 
         const variations = combos(namesAndOptions);
-        variations.map(variation => {
+        // let iteration = 0;
+        variations.map(async variation => {
             const attributes = _.map(variation, (option, name) => ({ name, option }));
 
             const sku = skuBase + _.chain(variation)
@@ -53,13 +54,17 @@ async function init() {
             const definedVariation = _.find(rawData.variations, { sku });
             const allVariations = rawData.allVariations;
             if (allVariations) {
-                const variationData = _.extend({}, allVariations, { sku, attributes });
-                createOrUpdateProductVariation(product.id, variationData);
+                // console.log(' - not create variations for all');
+                // const variationData = _.extend({}, allVariations, { sku, attributes });
+                // setTimeout(() => {
+                //     createOrUpdateProductVariation(product.id, variationData)
+                // }, 500 * iteration);
+                // iteration++;
             } else if (definedVariation) {
                 const variationData = _.extend({}, definedVariation, { attributes });
-                createOrUpdateProductVariation(product.id, variationData);
+                await createOrUpdateProductVariation(product.id, variationData);
             } else {
-                console.log(' - skipping variation: ' + sku);
+                // console.log(' - skipping variation: ' + sku);
             }
         });
     });
@@ -131,11 +136,16 @@ function updateProduct(productId, productData) {
 
 async function createOrUpdateProductVariation(productId, productVariationData) {
     const sku = productVariationData.sku;
-    const existingVariation = await getProductVariation(productId, sku);
-    if (existingVariation.length) {
-        updateProductVariation(productId, existingVariation[0].id, productVariationData);
-    } else {
-        createProductVariation(productId, productVariationData);
+    try{
+        const existingVariation = await getProductVariation(productId, sku);
+        if (existingVariation.length) {
+            await updateProductVariation(productId, existingVariation[0].id, productVariationData);
+        } else {
+            await createProductVariation(productId, productVariationData);
+        }
+    } catch (e) {
+        console.log(e);
+        process.exit(1);
     }
 }
 

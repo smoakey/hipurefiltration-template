@@ -85,7 +85,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						echo wc_get_formatted_cart_item_data( $cart_item );
 
 						// Backorder notification.
-                        $backorderNotif = 'Ships within <strong>' . get_field('lead_time', $_product->get_parent_id()) . '</strong>';
+                        $backorderNotif = 'Delivered within <strong>' . get_field('lead_time', $_product->get_parent_id()) . '</strong>';
 
 						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
 							echo '<p class="backorder_notification">' . $backorderNotif . '</p>';
