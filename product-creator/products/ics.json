@@ -36,45 +36,5 @@
             "option_keys": ["E", "V", "B", "S"]
         }
     ],
-    "variations": [
-        {
-            "sku": "HPICS101N6E",
-            "regular_price": "599.00",
-            "weight": "12",
-            "manage_stock": true,
-            "stock_quantity": 1,
-            "backorders": "notify",
-            "dimensions": {
-                "length": "19",
-                "width": "8",
-                "height": "7"
-            }
-        },
-        {
-            "sku": "HPICS201N6E",
-            "regular_price": "660.00",
-            "weight": "15",
-            "manage_stock": true,
-            "stock_quantity": 1,
-            "backorders": "notify",
-            "dimensions": {
-                "length": "28",
-                "width": "8",
-                "height": "7"
-            }
-        },
-        {
-            "sku": "HPICS301N6E",
-            "regular_price": "715.00",
-            "weight": "18",
-            "manage_stock": true,
-            "stock_quantity": 0,
-            "backorders": "notify",
-            "dimensions": {
-                "length": "37",
-                "width": "8",
-                "height": "7"
-            }
-        }
-    ]
+    "allVariations": true
 }

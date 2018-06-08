@@ -17,13 +17,12 @@
             "options": ["10", "20", "30", "40"]
         },
         {
-            "name": "Element Style",
+            "name": "Element Type",
             "variation": true,
-            "options": ["D:DOE/222", "6:226"],
-            "option_keys": ["D", "6"]
+            "options": ["222", "226"]
         },
         {
-            "name": "Element Size",
+            "name": "Connection Size",
             "variation": true,
             "options": ["1.5", "2"]
         },

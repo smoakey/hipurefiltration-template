@@ -112,6 +112,7 @@
 
         .stock {
             display: inline-block;
+            margin-bottom: 0 !important;
 
             &.out-of-stock {
                 @extend .is-uppercase, .has-text-weight-semibold, .has-text-danger;

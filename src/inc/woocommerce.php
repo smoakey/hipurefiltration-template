@@ -34,20 +34,27 @@ function add_cut_sheet() {
 function add_custom_availability_html($html, $availability_availability, $product) {
     $leadTime = get_field('lead_time', $product->get_parent_id());
 
+    if (strpos($leadTime, '-') !== false) {
+        $leadTimeParts = explode('-', $leadTime);
+        $leadTime = $leadTimeParts[1];
+    }
+
+    $date = strtotime("+".$leadTime, strtotime("now"));
+
     switch($product->get_stock_status())
     {
         case 'instock':
             $availability_html = '';
             break;
         case 'onbackorder':
-            $availability_html = '<p class="stock backorder">Delivered within <strong>' . $leadTime . '</strong></p>';
+            $availability_html = '<p class="stock backorder">Expected Ship Date on or before <strong>' . date('m/d/Y', $date) . '</strong></p>';
             break;
         case 'outofstock':
             $availability_html = '<p class="stock out-of-stock">Out of Stock</p>';
             if ($leadTime != '' && $leadTime != 'Unknown') {
-                $availability_html .= ' &mdash; Lead Time: <strong>' . $leadTime . '</strong>';
+                $availability_html .= '<br />&nbsp;&nbsp;&mdash; Expected Ship Date on or before: <strong>' . date('m/d/Y', $date) . '</strong>';
             }
-            $availability_html .= ' &mdash; <a href="/contact-us?product_sku='. $product->get_sku() .'">Contact us to order &rsaquo;</a>';
+            $availability_html .= '<br />&nbsp;&nbsp;&mdash; <a href="/contact-us?product_sku='. $product->get_sku() .'">Contact us to order &rsaquo;</a>';
             break;
     }
 

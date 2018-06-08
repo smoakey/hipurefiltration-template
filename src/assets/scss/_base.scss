@@ -9,3 +9,7 @@ section {
 a {
     color: $hipure-blue;
 }
+
+.content p:not(:last-child) {
+    margin-bottom: 2em !important;
+}

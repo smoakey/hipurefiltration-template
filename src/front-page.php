@@ -28,7 +28,13 @@
                 <?php $productCategories = get_terms('product_cat', ['hide_empty' => 0, 'number' => 3]); ?>
                 <?php foreach ($productCategories as $productCategory) : ?>
                     <div class="column product-category">
-                        <a href="<?php echo get_category_link($productCategory->term_id); ?>">
+                        <?php
+                            $link = get_term_link($productCategory);
+                            if ($productCategory->count == 0) {
+                                $link = '/contact-us?comment=I am interested in products related to ' . $productCategory->name;
+                            }
+                        ?>
+                        <a href="<?php echo $link; ?>">
                             <figure class="image is-square">
                                 <?php
                                     $thumbnail_id = get_woocommerce_term_meta(
@@ -40,7 +46,7 @@
                                 ?>
                             </figure>
                             <?php echo $productCategory->name; ?>
-                            <span>(<?php echo $productCategory->count; ?>)</span>
+                            <!-- <span>(<?php //echo $productCategory->count; ?>)</span> -->
                         </a>
                     </div>
                 <?php endforeach; ?>

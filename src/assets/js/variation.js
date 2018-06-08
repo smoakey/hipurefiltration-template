@@ -5,6 +5,9 @@ const $ = jQuery;
 $(document).ready(init);
 
 function init() {
+    var wc_add_to_cart_variation_params = wc_add_to_cart_variation_params || {};
+    wc_add_to_cart_variation_params.i18n_make_a_selection_text = 'Please select all product options before adding to your cart.';
+
 	var noVariationsTemplate = $('.no-variations-availability-template');
 	$('.woocommerce-variation').after('<span class="hipure-variations"></span>');
 	var dataMap = noVariationsTemplate.data('map');

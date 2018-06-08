@@ -85,7 +85,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 						echo wc_get_formatted_cart_item_data( $cart_item );
 
 						// Backorder notification.
-                        $backorderNotif = 'Delivered within <strong>' . get_field('lead_time', $_product->get_parent_id()) . '</strong>';
+						$leadTime = get_field('lead_time', $_product->get_parent_id());
+						$deliveredEstimate = strtotime('+' . $leadTime, strtotime('now'));
+                        $backorderNotif = 'Expected Ship Date on or before <strong>' . date('m/d/Y', $deliveredEstimate) . '</strong>';
+                        $backorderNotif .= '<br /><span class="has-text-weight-light has-text-grey-light is-italic">** All Expected ship dates are subject to change.</span>';
 
 						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
 							echo '<p class="backorder_notification">' . $backorderNotif . '</p>';

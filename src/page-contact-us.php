@@ -67,7 +67,7 @@
                                 <span class="has-text-danger is-uppercase is-size-7">*</span>
                             </label>
                             <div class="control">
-                                <textarea name="comment" class="textarea" placeholder="Comments or questions" required><?php echo isset($_GET['product_sku']) ? 'I am interested in ordering product # ' . $_GET['product_sku'] : ''; ?></textarea>
+                                <textarea name="comment" class="textarea" placeholder="Comments or questions" required><?php echo isset($_GET['product_sku']) ? 'I am interested in ordering product # ' . $_GET['product_sku'] : (isset($_GET['comment']) ? $_GET['comment'] : ''); ?></textarea>
                             </div>
                         </div>
                         <div class="field is-grouped is-grouped-centered">
