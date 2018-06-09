@@ -60,7 +60,7 @@
                 <div class="columns is-vcentered">
                     <div class="column is-half is-left">
                         <p class="title">HiPure <strong>Mailing List</strong></p>
-                        <p class="subtitle">Sign Up to receive special deals &amp; updates!</p>
+                        <p class="subtitle">Sign Up to receive 10% off your first order!</p>
                     </div>
 
                     <div class="column">

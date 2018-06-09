@@ -32,7 +32,7 @@
         {
             "name": "Gasket",
             "variation": true,
-            "options": ["EPDM (STD)", "Viton", "Buna", "Silicone"],
+            "options": ["EPDM", "Viton", "Buna", "Silicone"],
             "option_keys": ["E", "V", "B", "S"]
         }
     ],
